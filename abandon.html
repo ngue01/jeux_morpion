@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Abandon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="abandonMessage"></div>
+
+    <script src="scripts.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+    let abandoningPlayerName = sessionStorage.getItem('abandoningPlayerName');
+    if (abandoningPlayerName) {
+        document.getElementById('abandonMessage').textContent = `${abandoningPlayerName} a abandonné la partie.`;
+    }
+});
+
+    </script>
+</body>
+</html>

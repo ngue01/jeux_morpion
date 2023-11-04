@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex; /* En ligne par défaut */
+    width: 90%;
+}
+
+.game-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Pour positionner les éléments verticalement */
+    align-items: center;
+}
+
+.game-info {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    gap: 0;
+    justify-content: center;
+}
+
+/* (Reste du CSS inchangé) */
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;   
+    font-weight: bold;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.dashboard {
+    width: 150px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: #f9f9f9;
+}
+
+.player-name {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.player-score {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.player-symbol {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.turn-indicator {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+.score-board {
+    font-size: 1.2em;
+}
+
+/*MODAL PART*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    text-align: center;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    margin: 15px 0;
+}
+
+
+/*  */
+
+.game-setup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 50%;
+    margin: 0 auto;
+}
+
+button {
+    margin-top: 20px;
+}
+
+
+
+.return {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+#return {
+    background-color: #ff9800; /* Couleur orange "warning" */
+    color: #ffffff; /* Écriture blanche */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#return:hover {
+    background-color: #e57c00; /* Un peu plus foncé pour le survol */
+}
+
+#return::before {
+    content: "< "; /* Le symbole "<" avant le texte */
+    margin-right: 5px;
+}
+.return a {
+    color: #ffffff; /* Écriture blanche */
+    text-decoration: none; /* Enlève le soulignement par défaut */
+}
+
+.return a:hover {
+    color: #ffffff; /* Conserve la couleur blanche même au survol */
+}

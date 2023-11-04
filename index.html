@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu de Carrées</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="return">
+            <a href="selection.html">
+                <button id="return">Retour</button>
+            </a>
+        </div>
+        <!-- Tableau de bord pour le joueur de gauche (X) -->
+        <div class="dashboard dashboard-left">
+            <div class="player-name">Joueur 1</div>
+            <div class="player-score">Points: <span class="score-x">0</span></div>
+            <div class="player-symbol" style="color: blue;">X</div>
+
+            <div class="player-moves">
+                <h4>Mouvements :</h4>
+                <ul id="player1-moves"></ul>
+            </div>
+        </div>
+
+        <div class="game-section">
+            <div class="game-info">
+                
+                <div class="buttons">
+                    <button id="abandon">Abandonner</button>
+                    <button id="reset-game">Réinitialiser</button>
+                </div>
+               
+            </div>
+            <div class="game-grid"></div>
+        </div>
+
+        <!-- Tableau de bord pour le joueur de droite (O) -->
+        <div class="dashboard dashboard-right">
+            <div class="player-name">Joueur 2</div>
+            <div class="player-score">Points: <span class="score-o">0</span></div>
+            <div class="player-symbol" style="color: red;">O</div>
+
+            <div class="player-moves">
+                <h4>Mouvements :</h4>
+                <ul id="player2-moves"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="winnerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Vainqueur : <span id="winnerName"></span></h2>
+            </div>
+            <div class="modal-body">
+                <p>Symbole : <span id="winnerSymbol"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-restart">Recommencer</button>
+                <button id="modal-quit">Quitter</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+   
+
+ 
+</body>
+</html>

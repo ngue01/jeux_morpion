@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choisissez la taille du jeu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="setup-container">
+        <div class="grid-selection">
+            <label for="gridSize">Choisissez la taille de la grille:</label>
+            <input type="radio" id="grid5" name="gridSize" value="5">5x5
+            <input type="radio" id="grid7" name="gridSize" value="7">7x7
+            <input type="radio" id="grid11" name="gridSize" value="11">11x11
+            <button id="startGameBtn" disabled>Commencer le jeu</button>
+        </div>
+        <div class="player-entry">
+            <div>
+                Joueur 1: <input type="text" id="player1ID" placeholder="Identifiant du Joueur 1">
+                <button id="readyPlayer1">Prêt</button>
+            </div>
+            <div>
+                Joueur 2: <input type="text" id="player2ID" placeholder="Identifiant du Joueur 2" disabled>
+                <button id="readyPlayer2" disabled>Prêt</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+
+    <script type="text/javascript">
+
+
+
+
+        </script>
+</body>
+</html>
